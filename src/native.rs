@@ -58,7 +58,7 @@ pub struct Value {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass]
+#[pyclass(dict)]
 pub struct Value {
     pub by: String,
 
@@ -114,7 +114,7 @@ pub struct Entry {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass(get_all)]
+#[pyclass(dict, get_all)]
 pub struct Entry {
     pub id: String,
     pub value: Option<Value>,
@@ -141,7 +141,7 @@ pub struct Field {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass]
+#[pyclass(dict)]
 pub struct Field {
     pub name: String,
 
@@ -214,7 +214,7 @@ pub struct Category {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass(get_all)]
+#[pyclass(dict, get_all)]
 pub struct Category {
     pub name: String,
 
@@ -245,7 +245,7 @@ pub struct State {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass]
+#[pyclass(dict)]
 pub struct State {
     pub value: String,
     pub signer: String,
@@ -332,7 +332,7 @@ pub struct Form {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass]
+#[pyclass(dict)]
 pub struct Form {
     pub name: String,
 
@@ -491,7 +491,7 @@ pub struct Patient {
 #[cfg(feature = "python")]
 #[derive(Clone, Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass]
+#[pyclass(dict)]
 pub struct Patient {
     pub patient_id: String,
     pub unique_id: String,
@@ -574,7 +574,7 @@ pub struct Native {
 /// Contains the information from the Prelude native XML.
 #[derive(Debug, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
-#[pyclass(get_all)]
+#[pyclass(dict, get_all)]
 pub struct Native {
     #[serde(rename = "$value")]
     pub patients: Vec<Patient>,
