@@ -581,13 +581,6 @@ pub struct Native {
 }
 
 #[cfg(feature = "python")]
-impl Native {
-    fn __str__(&self) -> PyResult<String> {
-        Ok(format!("{:?}", self))
-    }
-}
-
-#[cfg(feature = "python")]
 fn to_py_datetime<'py>(
     py: Python<'py>,
     date_time: &DateTime<Utc>,
