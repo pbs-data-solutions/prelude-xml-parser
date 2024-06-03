@@ -823,7 +823,7 @@ mod tests {
             .suffix(".csv")
             .tempfile()
             .unwrap();
-        let result = parse_site_native_file(&file.path());
+        let result = parse_site_native_file(file.path());
 
         assert!(result.is_err());
         assert!(matches!(result, Err(Error::InvalidFileType(_))));
@@ -844,7 +844,7 @@ mod tests {
             .suffix(".csv")
             .tempfile()
             .unwrap();
-        let result = parse_subject_native_file(&file.path());
+        let result = parse_subject_native_file(file.path());
 
         assert!(result.is_err());
         assert!(matches!(result, Err(Error::InvalidFileType(_))));
@@ -865,7 +865,7 @@ mod tests {
             .suffix(".csv")
             .tempfile()
             .unwrap();
-        let result = parse_user_native_file(&file.path());
+        let result = parse_user_native_file(file.path());
 
         assert!(result.is_err());
         assert!(matches!(result, Err(Error::InvalidFileType(_))));
