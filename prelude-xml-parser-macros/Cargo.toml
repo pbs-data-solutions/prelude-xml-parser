@@ -1,0 +1,21 @@
+[package]
+name = "prelude-xml-parser-macros"
+version = "0.1.0"
+edition = "2021"
+authors = ["Paul Sanders <paul@pbsdatasolutions.com>"]
+description = "Macros for deserializing Prelude EDC XML files into Rust stucts."
+documentation = "https://docs.rs/prelude-xml-parser"
+homepage = "https://github.com/pbs-data-solutions/prelude-xml-parser"
+repository = "https://github.com/pbs-data-solutions/prelude-xml-parser"
+readme = "README.md"
+keywords = ["prelude-edc", "xml", "deserialization", "pyo3"]
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.86"
+quote = "1.0.36"
+roxmltree = "0.20.0"
+syn = "2.0.68"
