@@ -1,7 +1,9 @@
 # Prelude XML Parser
 
-[![Tests Status](https://github.com/pbs-data-solutions/prelude-xml-parser/actions/workflows/testing.yml/badge.svg?branch=main&event=push)](https://github.com/pbs-data-solutions/prelude-xml-parser/actions?query=workflow%3ATesting+branch%3Amain+event%3Apush)
-![crates.io](https://img.shields.io/crates/v/prelude-xml-parser.svg?color=brightgreen)
+> [!NOTE]
+> This repository has been moved into the
+> [prelude-parser](https://github.com/pbs-data-solutions/prelude-parser) repository. All
+> functionality and the crate name remain unchanged.
 
 Deserialize Prelude EDC native XML files into Rust structs. Enabling the `python` feature allows
 deserializing to Python classes with PyO3.
